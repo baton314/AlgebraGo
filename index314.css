@@ -1,0 +1,361 @@
+/* Основные стили */
+:root {
+    --primary-color: #6e48aa;
+    --secondary-color: #9d50bb;
+    --accent-color: #4776E6;
+    --text-color: #333;
+    --light-bg: #f9f9f9;
+    --card-bg: #ffffff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-bg);
+  }
+  
+  header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+    position: relative;
+  }
+  
+  .header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  h1 i {
+    margin-right: 10px;
+  }
+  
+  nav {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  nav li {
+    margin: 0 15px;
+  }
+  
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .nav-link i {
+    margin-right: 8px;
+  }
+  
+  main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 20px;
+  }
+  
+  .section {
+    margin-bottom: 3rem;
+  }
+  
+  .section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+  }
+  
+  .section h2 i {
+    margin-right: 10px;
+  }
+  
+  /* Карточки */
+  .theory-card, .practice-card, .history-quiz, .author-card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .theory-card h3, .practice-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+  }
+  
+  /* Уравнения */
+  .equation {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+  
+  .formula-box {
+    background-color: #f0f0f0;
+    border-left: 4px solid var(--primary-color);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 0 4px 4px 0;
+  }
+  
+  /* Формы и кнопки */
+  .input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 1rem 0;
+    flex-wrap: wrap;
+  }
+  
+  input {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    flex: 1;
+    min-width: 60px;
+    max-width: 100px;
+  }
+  
+  .calc-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin: 0.5rem 0;
+  }
+  
+  .calc-btn:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  .calc-btn i {
+    margin-right: 8px;
+  }
+  
+  /* Результаты */
+  .result-box {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  
+  /* График */
+  #graph {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin-top: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+  }
+  
+  /* Схема Горнера */
+  .horner-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+  }
+  
+  .horner-table th, .horner-table td {
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    text-align: center;
+  }
+  
+  .horner-table th {
+    background-color: #f0f0f0;
+  }
+  
+  .horner-table.interactive .cell {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  /* Изображения */
+  .scientist-img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin: 0.5rem 0;
+    display: block;
+  }
+  
+  .history-img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 4px;
+    margin: 0.5rem 0;
+  }
+  
+  /* Таймлайн */
+  .history-timeline {
+    position: relative;
+    padding-left: 50px;
+    margin: 2rem 0;
+  }
+  
+  .history-timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--primary-color);
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+  }
+  
+  .timeline-year {
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+  
+  .timeline-content {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    margin-left: 30px;
+  }
+  
+  /* Викторина */
+  .quiz-options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 1rem 0;
+  }
+  
+  .quiz-option {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    background-color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .quiz-option:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Об авторе */
+  .author-card {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .author-info, .project-info {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  /* Футер */
+  footer {
+    background-color: #333;
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .social-links {
+    margin-top: 1rem;
+  }
+  
+  .social-link {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+  }
+  
+  .social-link:hover {
+    color: var(--secondary-color);
+  }
+  
+  /* Адаптивность */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    nav li {
+      margin: 5px 0;
+    }
+    
+    .input-group {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .quiz-options {
+      grid-template-columns: 1fr;
+    }
+    
+    .author-card {
+      flex-direction: column;
+    }
+  }
